@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataSiswa;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\AddSiswa;
 use App\Http\Controllers\EditSiswa;
 use App\Http\Controllers\InsertSiswa;
@@ -35,3 +36,12 @@ Route::post('/insertbuku', [BookController::class, 'insert'])->name('admin.inser
 Route::post('/updatebuku', [BookController::class, 'update'])->name('admin.updatebuku');
 
 Route::get('/databuku/delete/{id}', [BookController::class, 'delete'])->name('admin.deletebuku');
+
+Route::get('/dataguru', [GuruController::class, 'index'])->name('admin.dataguru');
+Route::get('/dataguru/addguru', [GuruController::class, 'add'])->name('admin.addguru');
+Route::get('/dataguru/editguru/{id}', [GuruController::class, 'edit'])->name('admin.editguru');
+Route::post('/insertguru', [GuruController::class, 'insert'])->name('admin.insertguru');
+Route::post('/updateguru', [GuruController::class, 'update'])->name('admin.updateguru');
+
+Route::get('/dataguru/delete/{id}', [GuruController::class, 'delete'])->name('admin.deleteguru');
+

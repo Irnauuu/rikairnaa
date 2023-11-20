@@ -26,3 +26,13 @@
     </a>
     
   </li>
+
+  <li class="nav-item menu-open">
+    <a href="{{ route('admin.dataguru') }}" class="nav-link {{ Route::currentRouteName() == 'admin.dataguru' ? 'active' : '' }}">
+      <i class="nav-icon fas fa-user-alt"></i>
+      <p>
+        Data Guru
+      </p>
+    </a>
+    
+  </li>
